@@ -25,7 +25,7 @@ Maintaining this invariant is important to prevent unbounded growth of idle obje
 
 While this change corrected the original issue, it altered the control flow in `addObject` in a way that introduced a concurrency regression.
 
-Commit :- https://github.com/apache/commons-pool/commit/c5d63adfca0d1063cce6a3a53f4be585cf48c4d1
+[Commit](https://github.com/apache/commons-pool/commit/c5d63adfca0d1063cce6a3a53f4be585cf48c4d1)
 
 ---
 
@@ -39,7 +39,7 @@ The issue occurs when multiple threads add objects to the pool concurrently. Und
 
 The issue is timing-dependent and does not reliably reproduce without concurrency stress testing. On local testing, the failure was observed intermittently.
 
-PR for the failing test :- https://github.com/apache/commons-pool/pull/451
+[PR for the failing test](https://github.com/apache/commons-pool/pull/451)
 
 ---
 
@@ -163,7 +163,7 @@ In addition to the code change, the concurrency test is included to provide regr
 
 The fix was accepted upstream and is tracked under [**POOL-426**](https://issues.apache.org/jira/browse/POOL-426).
 
-PR for the fix :- https://github.com/apache/commons-pool/pull/452
+[PR for the fix](https://github.com/apache/commons-pool/pull/452)
 
 ---
 
